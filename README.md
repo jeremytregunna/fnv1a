@@ -1,7 +1,8 @@
 # Fnv1a
 
-Implements a 32-bit FNV-1a hashing algorithm. This algorithm is used for
-sharding data across Erlang nodes where uniqueness and speed are critical.
+Implements a 32-bit FNV-1a hashing algorithm. This algorithm is useful for
+sharding data across Erlang nodes where uniqueness and speed are critical,
+for example. It's also useful for a variety of other purposes.
 
 ## Installation
 
