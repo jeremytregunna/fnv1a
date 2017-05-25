@@ -1,5 +1,5 @@
 defmodule Fnv1a do
-  @doc ~S"""
+  @moduledoc ~S"""
   Hashes terms using the FNV-1a 32-bit algorithm.
 
   ## Examples
@@ -12,15 +12,17 @@ defmodule Fnv1a do
 
   use Bitwise
 
-  @offset 2166136261
-  @prime 16777619
+  @offset 2_166_136_261
+  @prime 16_777_619
 
   def hash(term) when is_binary(term) do
     _hash(@offset, 0, term)
   end
 
   def hash(term) do
-    :erlang.term_to_binary(term) |> hash
+    term
+    |> :erlang.term_to_binary(term)
+    |> hash
   end
 
   defp _hash(hash, byte_offset, bin) when byte_size(bin) == byte_offset do

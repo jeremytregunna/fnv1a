@@ -16,7 +16,9 @@ defmodule Fnv1a.Mixfile do
   end
 
   defp deps do
-    [{:ex_doc, "~> 0.15.0", only: :dev}]
+    [{:ex_doc, "~> 0.15.0", only: :dev},
+     {:credo, "~> 0.7.3"},
+     {:dialyxir, "~> 0.5.0"}]
   end
 
   defp package do
